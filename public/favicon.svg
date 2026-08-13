@@ -1,55 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
-  <defs>
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#4F46E5"/>
-      <stop offset="50%" stop-color="#6366F1"/>
-      <stop offset="100%" stop-color="#0EA5E9"/>
-    </linearGradient>
-    <linearGradient id="docGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#FFFFFF"/>
-      <stop offset="100%" stop-color="#F8FAFC"/>
-    </linearGradient>
-    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#10B981"/>
-      <stop offset="100%" stop-color="#059669"/>
-    </linearGradient>
-    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000000" flood-opacity="0.22"/>
-    </filter>
-  </defs>
-
-  <!-- Outer Rounded Container -->
-  <rect x="32" y="32" width="448" height="448" rx="100" fill="url(#bgGrad)"/>
-  <rect x="32" y="32" width="448" height="448" rx="100" fill="none" stroke="#FFFFFF" stroke-opacity="0.25" stroke-width="8"/>
-
-  <!-- Invoice Sheet with Fold Corner -->
-  <g filter="url(#shadow)">
-    <!-- Main Sheet -->
-    <path d="M144 112 H312 L368 168 V400 C368 413.255 357.255 424 344 424 H144 C130.745 424 120 413.255 120 400 V136 C120 122.745 130.745 112 144 112 Z" fill="url(#docGrad)"/>
+  <!-- Rounded Squircle Background -->
+  <rect x="0" y="0" width="512" height="512" rx="128" fill="#4F46E5" />
+  
+  <!-- Lucide FileText Icon Alignment -->
+  <g fill="none" stroke="#FFFFFF" stroke-width="32" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Document Outline -->
+    <path d="M160 80 H296 L384 168 V416 C384 433.67 369.67 448 352 448 H160 C142.33 448 128 433.67 128 416 V112 C128 94.33 142.33 80 160 80 Z" />
     <!-- Folded Corner -->
-    <path d="M312 112 V156 C312 162.627 317.373 168 324 168 H368 L312 112 Z" fill="#E2E8F0"/>
-  </g>
-
-  <!-- Header Pill -->
-  <rect x="152" y="156" width="112" height="16" rx="8" fill="url(#bgGrad)"/>
-
-  <!-- Content Lines -->
-  <rect x="152" y="196" width="176" height="12" rx="6" fill="#94A3B8"/>
-  <rect x="152" y="224" width="144" height="10" rx="5" fill="#CBD5E1"/>
-  <rect x="152" y="248" width="160" height="10" rx="5" fill="#CBD5E1"/>
-
-  <!-- Dashed Line -->
-  <line x1="152" y1="280" x2="336" y2="280" stroke="#CBD5E1" stroke-width="3" stroke-dasharray="6 4"/>
-
-  <!-- Total Amount Accent Box -->
-  <rect x="152" y="304" width="184" height="48" rx="10" fill="#F1F5F9"/>
-  <rect x="168" y="322" width="60" height="14" rx="7" fill="#64748B"/>
-  <rect x="256" y="316" width="64" height="24" rx="6" fill="url(#bgGrad)"/>
-
-  <!-- Success Checkmark Badge -->
-  <g filter="url(#shadow)">
-    <circle cx="344" cy="352" r="44" fill="url(#accentGrad)"/>
-    <circle cx="344" cy="352" r="44" fill="none" stroke="#FFFFFF" stroke-opacity="0.3" stroke-width="4"/>
-    <path d="M324 352 L338 366 L366 336" fill="none" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M296 80 V168 H384" />
+    <!-- Document Text Lines -->
+    <line x1="192" y1="240" x2="320" y2="240" />
+    <line x1="192" y1="312" x2="320" y2="312" />
+    <line x1="192" y1="380" x2="256" y2="380" />
   </g>
 </svg>
