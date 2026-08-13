@@ -81,19 +81,18 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onNavigate }) => {
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column' }}>
-      {/* 1. Full-Screen Hero Section */}
+      {/* 1. Hero Section */}
       <section
         style={{
           backgroundColor: 'var(--color-surface)',
           borderBottom: '1px solid var(--color-border)',
-          minHeight: 'calc(100vh - 44px)',
+          padding: '28px 0 48px',
           display: 'flex',
-          alignItems: 'center',
+          alignItems: 'flex-start',
           justifyContent: 'center',
-          padding: '24px 0',
         }}
       >
-        <div className="container hero-grid" style={{ display: 'grid', gridTemplateColumns: '1.1fr 1fr', gap: '32px', alignItems: 'center', width: '100%' }}>
+        <div className="container hero-grid" style={{ display: 'grid', gridTemplateColumns: '1.1fr 1fr', gap: '32px', alignItems: 'flex-start', width: '100%' }}>
           {/* Left Column */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', maxWidth: '520px' }}>
             <div
