@@ -1,0 +1,81 @@
+/* Centralized Design Tokens - Global Website-Wide Compact Density */
+:root {
+  /* Color Palette - Premium SaaS Indigo Theme */
+  --color-primary: #4F46E5;
+  --color-primary-dark: #3730A3;
+  --color-primary-light: #EEF2FF;
+  --color-primary-hover: #4338CA;
+  
+  --color-text-primary: #0F172A;   /* Slate 900 */
+  --color-text-secondary: #475569; /* Slate 600 */
+  --color-text-muted: #64748B;     /* Slate 500 */
+  --color-text-on-primary: #FFFFFF;
+  
+  --color-background: #F8FAFC;     /* Slate 50 */
+  --color-surface: #FFFFFF;
+  --color-surface-hover: #F1F5F9;   /* Slate 100 */
+  --color-surface-subtle: #F8FAFC;
+  
+  --color-border: #E2E8F0;         /* Slate 200 */
+  --color-border-strong: #CBD5E1;  /* Slate 300 */
+  --color-border-focus: #818CF8;
+  
+  --color-success: #16A34A;
+  --color-success-light: #DCFCE7;
+  --color-warning: #D97706;
+  --color-warning-light: #FEF3C7;
+  --color-danger: #DC2626;
+  --color-danger-light: #FEE2E2;
+  
+  /* Typography - Website-Wide Compact Scale */
+  --font-family-base: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-family-mono: 'JetBrains Mono', Consolas, Monaco, monospace;
+  
+  --font-size-display: 1.875rem;   /* 30px */
+  --font-size-h1: 1.5rem;          /* 24px */
+  --font-size-h2: 1.25rem;         /* 20px */
+  --font-size-h3: 1rem;            /* 16px */
+  --font-size-body: 0.875rem;      /* 14px */
+  --font-size-small: 0.775rem;     /* 12.5px */
+  --font-size-caption: 0.7rem;      /* 11px */
+  
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  
+  --line-height-tight: 1.18;
+  --line-height-normal: 1.4;
+  --line-height-relaxed: 1.5;
+  
+  /* Compact Spacing Scale */
+  --space-1: 3px;
+  --space-2: 5px;
+  --space-3: 8px;
+  --space-4: 12px;
+  --space-5: 14px;
+  --space-6: 16px;
+  --space-8: 22px;
+  --space-10: 28px;
+  --space-12: 32px;
+  --space-16: 40px;
+  
+  /* Border Radii */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+  --radius-xl: 12px;
+  --radius-full: 9999px;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 3px 5px -1px rgba(15, 23, 42, 0.05);
+  --shadow-lg: 0 8px 12px -3px rgba(15, 23, 42, 0.07);
+  --shadow-xl: 0 14px 18px -4px rgba(15, 23, 42, 0.08);
+  --shadow-focus: 0 0 0 3px rgba(79, 70, 229, 0.2);
+
+  /* Transitions */
+  --transition-fast: 150ms ease-in-out;
+  --transition-normal: 250ms ease-in-out;
+  --transition-slow: 350ms ease-in-out;
+}

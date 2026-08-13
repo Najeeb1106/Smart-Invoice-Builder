@@ -1,0 +1,179 @@
+@import './tokens.css';
+
+/* Modern Compact Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: var(--font-family-base);
+  font-size: 13.5px; /* Compact global base font size */
+  color: var(--color-text-primary);
+  background-color: var(--color-background);
+  line-height: var(--line-height-normal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  flex: 1;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Accessibility Focus States */
+:focus-visible {
+  outline: none;
+  box-shadow: var(--shadow-focus);
+}
+
+/* Base Typography Classes */
+h1, .text-h1 {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  color: var(--color-text-primary);
+}
+
+h2, .text-h2 {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  color: var(--color-text-primary);
+}
+
+h3, .text-h3 {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  color: var(--color-text-primary);
+}
+
+p, .text-body {
+  font-size: var(--font-size-body);
+  color: var(--color-text-secondary);
+}
+
+.text-small {
+  font-size: var(--font-size-small);
+}
+
+.text-caption {
+  font-size: var(--font-size-caption);
+  color: var(--color-text-muted);
+}
+
+/* Layout Utilities */
+.container {
+  width: 100%;
+  max-width: 1140px; /* Compact container max-width */
+  margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+/* Fail-Proof Direct Live Preview Print Architecture (§36) */
+@media print {
+  html, body, #root, .screen-app-shell, .builder-layout, .builder-main-workspace, .builder-canvas-pane {
+    background: #ffffff !important;
+    color: #000000 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+    display: block !important;
+    position: static !important;
+  }
+
+  /* Hide screen-only UI elements */
+  .builder-toolbar,
+  .builder-sidebar,
+  .builder-editor-container,
+  .builder-canvas-toolbar,
+  .mobile-fab-container,
+  nav,
+  footer,
+  .no-print,
+  button,
+  .toast-container {
+    display: none !important;
+    height: 0 !important;
+    width: 0 !important;
+    overflow: hidden !important;
+  }
+
+  /* Expand Live Preview Document to 1:1 Print Dimensions */
+  .preview-panel-container {
+    display: block !important;
+    transform: none !important;
+    position: static !important;
+    margin: 0 auto !important;
+    width: 210mm !important;
+    min-height: 297mm !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+    background: #ffffff !important;
+  }
+
+  .invoice-a4-page {
+    box-shadow: none !important;
+    border: none !important;
+    margin: 0 auto !important;
+    width: 210mm !important;
+    max-width: 210mm !important;
+    min-height: 297mm !important;
+    padding: 15mm !important;
+    transform: none !important;
+    background: #ffffff !important;
+    box-sizing: border-box !important;
+    page-break-after: avoid;
+    page-break-inside: avoid;
+  }
+
+  @page {
+    size: A4 portrait;
+    margin: 0;
+  }
+}

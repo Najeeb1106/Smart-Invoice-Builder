@@ -1,0 +1,113 @@
+/* Smart Invoice Builder v3.0 - Zero-Scroll Laptop Density */
+
+.builder-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background-color: #F8FAFC;
+  overflow: hidden;
+}
+
+@media (max-width: 1024px) {
+  .builder-layout {
+    height: auto;
+    min-height: 100vh;
+    overflow: auto;
+  }
+}
+
+.builder-toolbar {
+  height: 42px; /* Compact 42px top toolbar */
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #E2E8F0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  z-index: 30;
+  flex-shrink: 0;
+}
+
+.builder-main-workspace {
+  display: flex;
+  flex: 1;
+  height: calc(100vh - 42px);
+  overflow: hidden;
+}
+
+@media (max-width: 1024px) {
+  .builder-main-workspace {
+    flex-direction: column;
+    height: auto;
+    overflow: visible;
+  }
+}
+
+/* Sidebar Navigation */
+.builder-sidebar {
+  width: 180px;
+  background-color: #FFFFFF;
+  border-right: 1px solid #E2E8F0;
+  padding: 12px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex-shrink: 0;
+  overflow-y: auto;
+}
+
+@media (max-width: 1024px) {
+  .builder-sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #E2E8F0;
+    flex-direction: row;
+    overflow-x: auto;
+    padding: 8px;
+  }
+}
+
+/* Center Form Container */
+.builder-editor-container {
+  flex: 1;
+  max-width: 580px;
+  padding: 12px 16px;
+  overflow-y: auto;
+  background-color: #F8FAFC;
+}
+
+@media (max-width: 1024px) {
+  .builder-editor-container {
+    max-width: 100%;
+    padding: 12px;
+  }
+}
+
+.builder-form-card {
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 10px;
+  padding: 16px 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+/* Right Document Canvas */
+.builder-canvas-pane {
+  flex: 1.1;
+  background-color: #F8FAFC;
+  border-left: 1px solid #E2E8F0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+@media (max-width: 1024px) {
+  .builder-canvas-pane {
+    width: 100%;
+    padding: 12px 6px;
+  }
+}

@@ -1,0 +1,88 @@
+import { TemplateMeta } from '../types/template';
+
+export const TEMPLATES: TemplateMeta[] = [
+  {
+    id: 'modern',
+    name: 'Modern',
+    category: 'Agency',
+    description: 'Contemporary SaaS layout with indigo accent, clear visual hierarchy, and balanced whitespace.',
+    accentColor: '#4F46E5',
+  },
+  {
+    id: 'classic',
+    name: 'Classic',
+    category: 'Corporate',
+    description: 'Traditional professional invoice featuring formal typography and structured borders.',
+    accentColor: '#1E293B',
+  },
+  {
+    id: 'minimal',
+    name: 'Minimal',
+    category: 'Freelancer',
+    description: 'Ultra-clean design with thin subtle dividers, wide margins, and elegant typography.',
+    accentColor: '#0F172A',
+  },
+  {
+    id: 'executive',
+    name: 'Executive',
+    category: 'Corporate',
+    description: 'Premium corporate layout with a dramatic dark header and amber/gold accent details.',
+    accentColor: '#D97706',
+  },
+  {
+    id: 'corporate-blue',
+    name: 'Corporate Blue',
+    category: 'Corporate',
+    description: 'Deep navy theme with structured grid sections and formal corporate tables.',
+    accentColor: '#1E3A8A',
+  },
+  {
+    id: 'professional-gray',
+    name: 'Professional Gray',
+    category: 'Services',
+    description: 'Neutral gray consulting aesthetic with precise hairline rules and subtle highlights.',
+    accentColor: '#475569',
+  },
+  {
+    id: 'freelancer-minimal',
+    name: 'Freelancer Minimal',
+    category: 'Freelancer',
+    description: 'Personal-brand focused layout that puts freelancer contact and identity front and center.',
+    accentColor: '#2563EB',
+  },
+  {
+    id: 'creative-studio',
+    name: 'Creative Studio',
+    category: 'Creative',
+    description: 'Bold agency design with distinctive accent header blocks and dynamic styling.',
+    accentColor: '#7C3AED',
+  },
+  {
+    id: 'developer',
+    name: 'Developer Invoice',
+    category: 'IT & Software',
+    description: 'Technology aesthetic featuring monospace metadata fields and tech project formatting.',
+    accentColor: '#059669',
+  },
+  {
+    id: 'retail-classic',
+    name: 'Retail Classic',
+    category: 'Retail',
+    description: 'Compact, dense retail invoice inspired by itemized receipt layouts.',
+    accentColor: '#DC2626',
+  },
+  {
+    id: 'service-pro',
+    name: 'Service Pro',
+    category: 'Services',
+    description: 'Service-business layout with prominent project summaries and terms block.',
+    accentColor: '#0891B2',
+  },
+  {
+    id: 'consultant',
+    name: 'Consultant',
+    category: 'Services',
+    description: 'Executive letterhead layout with statement-style summary and formal presentation.',
+    accentColor: '#334155',
+  },
+];

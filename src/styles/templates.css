@@ -1,0 +1,37 @@
+/* A4 Document Rendering Base Styles */
+.invoice-a4-page {
+  width: 210mm;
+  min-height: 297mm;
+  background-color: #FFFFFF;
+  color: #111827;
+  padding: 24mm 20mm;
+  box-shadow: var(--shadow-xl);
+  border-radius: 2px;
+  position: relative;
+  box-sizing: border-box;
+  font-family: var(--font-family-base);
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0 auto;
+}
+
+/* Scaled Thumbnail Wrapper - Full A4 Document Proportions */
+.template-scaled-container {
+  width: 100%;
+  aspect-ratio: 1 / 1.414; /* True A4 Aspect Ratio for Full Page Visibility */
+  overflow: hidden;
+  position: relative;
+  background: #FFFFFF;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+}
+
+.template-scaled-inner {
+  width: 210mm;
+  min-height: 297mm;
+  transform-origin: top left;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
