@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://smart-invoice-builder-free.vercel.app/sitemap.xml
