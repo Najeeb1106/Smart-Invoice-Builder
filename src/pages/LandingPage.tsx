@@ -86,13 +86,14 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onNavigate }) => {
         style={{
           backgroundColor: 'var(--color-surface)',
           borderBottom: '1px solid var(--color-border)',
-          padding: '28px 0 48px',
+          minHeight: 'calc(85vh - 44px)',
           display: 'flex',
-          alignItems: 'flex-start',
+          alignItems: 'center',
           justifyContent: 'center',
+          padding: '48px 0',
         }}
       >
-        <div className="container hero-grid" style={{ display: 'grid', gridTemplateColumns: '1.1fr 1fr', gap: '32px', alignItems: 'flex-start', width: '100%' }}>
+        <div className="container hero-grid" style={{ display: 'grid', gridTemplateColumns: '1.1fr 1fr', gap: '32px', alignItems: 'center', width: '100%' }}>
           {/* Left Column */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', maxWidth: '520px' }}>
             <div
