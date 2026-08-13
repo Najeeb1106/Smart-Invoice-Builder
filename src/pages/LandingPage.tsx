@@ -147,28 +147,36 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onNavigate }) => {
           {/* Right Column: Live Invoice Preview Frame */}
           <div
             style={{
-              boxShadow: 'var(--shadow-xl)',
-              borderRadius: 'var(--radius-lg)',
-              overflow: 'hidden',
-              border: '1px solid var(--color-border)',
-              backgroundColor: '#FFFFFF',
-              width: '100%',
-              maxHeight: 'calc(100vh - 84px)',
               display: 'flex',
-              flexDirection: 'column',
-              margin: 'auto 0',
+              justifyContent: 'center',
+              alignItems: 'center',
+              width: '100%',
             }}
           >
-            <div style={{ display: 'flex', alignItems: 'center', gap: '6px', padding: '6px 12px', backgroundColor: '#F1F5F9', borderBottom: '1px solid #CBD5E1', flexShrink: 0 }}>
-              <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#EF4444' }} />
-              <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#F59E0B' }} />
-              <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#10B981' }} />
-              <span style={{ fontSize: '11px', color: '#64748B', marginLeft: '4px', fontWeight: 600, fontFamily: 'monospace' }}>
-                live-sample-preview (Codrix Dev)
-              </span>
-            </div>
-            <div style={{ padding: '0', width: '100%', overflow: 'hidden', display: 'flex', justifyContent: 'center', alignItems: 'flex-start' }}>
-              <TemplateScaledPreview templateId="modern" invoice={SAMPLE_MARKETING_INVOICE} scaleOverride={0.40} />
+            <div
+              style={{
+                boxShadow: 'var(--shadow-xl)',
+                borderRadius: 'var(--radius-lg)',
+                overflow: 'hidden',
+                border: '1px solid var(--color-border)',
+                backgroundColor: '#FFFFFF',
+                width: 'fit-content',
+                maxWidth: '100%',
+                display: 'flex',
+                flexDirection: 'column',
+              }}
+            >
+              <div style={{ display: 'flex', alignItems: 'center', gap: '6px', padding: '6px 12px', backgroundColor: '#F1F5F9', borderBottom: '1px solid #CBD5E1', flexShrink: 0 }}>
+                <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#EF4444' }} />
+                <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#F59E0B' }} />
+                <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#10B981' }} />
+                <span style={{ fontSize: '11px', color: '#64748B', marginLeft: '4px', fontWeight: 600, fontFamily: 'monospace' }}>
+                  live-sample-preview (Codrix Dev)
+                </span>
+              </div>
+              <div style={{ padding: '0', width: 'fit-content', overflow: 'hidden' }}>
+                <TemplateScaledPreview templateId="modern" invoice={SAMPLE_MARKETING_INVOICE} scaleOverride={0.42} />
+              </div>
             </div>
           </div>
         </div>

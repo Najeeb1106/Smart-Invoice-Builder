@@ -51,7 +51,8 @@ export const TemplateScaledPreview: React.FC<TemplateScaledPreviewProps> = ({
     };
   }, [scaleOverride]);
 
-  // Exact A4 height (297mm = 1122.5px at 96DPI) multiplied by current scale
+  // Exact A4 width (210mm = 793.7px) and height (297mm = 1122.5px) multiplied by scale
+  const containerWidthPx = Math.round(793.7 * scale);
   const containerHeightPx = Math.round(1122.5 * scale);
 
   return (
@@ -59,14 +60,18 @@ export const TemplateScaledPreview: React.FC<TemplateScaledPreviewProps> = ({
       ref={containerRef}
       className="template-scaled-container"
       style={{
+        width: `${containerWidthPx}px`,
         height: `${containerHeightPx}px`,
         aspectRatio: 'unset',
+        border: 'none',
+        boxShadow: 'none',
       }}
     >
       <div
         className="template-scaled-inner"
         style={{
           transform: `scale(${scale})`,
+          transformOrigin: 'top left',
         }}
       >
         <TemplateRenderer invoice={sampleData} templateId={templateId} />
