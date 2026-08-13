@@ -19,7 +19,7 @@ export const ModernTemplate: React.FC<{ invoice: InvoiceData }> = ({ invoice }) 
               style={{ maxHeight: '60px', maxWidth: '180px', objectFit: 'contain', marginBottom: '12px' }}
             />
           ) : null}
-          <h1 style={{ fontSize: '24px', fontWeight: 800, color: '#1E1B4B', letterSpacing: '-0.02em' }}>
+          <h1 style={{ fontSize: '22px', fontWeight: 600, color: '#1E1B4B', letterSpacing: '-0.01em' }}>
             {invoice.business.name || 'Your Business Name'}
           </h1>
           <p style={{ fontSize: '13px', color: '#4B5563', whiteSpace: 'pre-line', marginTop: '4px' }}>
@@ -37,21 +37,21 @@ export const ModernTemplate: React.FC<{ invoice: InvoiceData }> = ({ invoice }) 
               display: 'inline-block',
               backgroundColor: '#EEF2FF',
               color: '#4F46E5',
-              padding: '6px 16px',
-              borderRadius: '8px',
-              fontSize: '13px',
-              fontWeight: 700,
-              marginBottom: '8px',
+              padding: '5px 14px',
+              borderRadius: '6px',
+              fontSize: '12px',
+              fontWeight: 600,
+              marginBottom: '6px',
             }}
           >
             INVOICE
           </div>
-          <p style={{ fontSize: '18px', fontWeight: 700, color: '#111827' }}>
+          <p style={{ fontSize: '16px', fontWeight: 600, color: '#111827' }}>
             {invoice.details.invoiceNumber}
           </p>
-          <div style={{ fontSize: '13px', color: '#6B7280', marginTop: '6px' }}>
-            <p><strong>Date:</strong> {formatDate(invoice.details.invoiceDate)}</p>
-            {invoice.details.dueDate && <p><strong>Due Date:</strong> {formatDate(invoice.details.dueDate)}</p>}
+          <div style={{ fontSize: '12px', color: '#6B7280', marginTop: '6px' }}>
+            <p><span style={{ color: '#475569', fontWeight: 500 }}>Date:</span> {formatDate(invoice.details.invoiceDate)}</p>
+            {invoice.details.dueDate && <p><span style={{ color: '#475569', fontWeight: 500 }}>Due Date:</span> {formatDate(invoice.details.dueDate)}</p>}
           </div>
         </div>
       </div>
@@ -70,10 +70,10 @@ export const ModernTemplate: React.FC<{ invoice: InvoiceData }> = ({ invoice }) 
         }}
       >
         <div>
-          <p style={{ fontSize: '11px', fontWeight: 700, textTransform: 'uppercase', color: '#4F46E5', letterSpacing: '0.05em', marginBottom: '6px' }}>
+          <p style={{ fontSize: '11px', fontWeight: 600, textTransform: 'uppercase', color: '#4F46E5', letterSpacing: '0.05em', marginBottom: '6px' }}>
             Billed To
           </p>
-          <p style={{ fontSize: '15px', fontWeight: 700, color: '#0F172A' }}>
+          <p style={{ fontSize: '14px', fontWeight: 600, color: '#0F172A' }}>
             {invoice.customer.name || 'Customer Name'}
           </p>
           <p style={{ fontSize: '13px', color: '#4B5563', whiteSpace: 'pre-line', marginTop: '4px' }}>
@@ -86,7 +86,7 @@ export const ModernTemplate: React.FC<{ invoice: InvoiceData }> = ({ invoice }) 
 
         {invoice.details.paymentTerms && (
           <div>
-            <p style={{ fontSize: '11px', fontWeight: 700, textTransform: 'uppercase', color: '#4F46E5', letterSpacing: '0.05em', marginBottom: '6px' }}>
+            <p style={{ fontSize: '11px', fontWeight: 600, textTransform: 'uppercase', color: '#4F46E5', letterSpacing: '0.05em', marginBottom: '6px' }}>
               Payment Terms
             </p>
             <p style={{ fontSize: '13px', color: '#334155' }}>
@@ -99,17 +99,17 @@ export const ModernTemplate: React.FC<{ invoice: InvoiceData }> = ({ invoice }) 
       {/* Items Table */}
       <table style={{ width: '100%', borderCollapse: 'collapse', marginBottom: '32px' }}>
         <thead>
-          <tr style={{ borderBottom: '2px solid #E2E8F0', textTransform: 'uppercase', fontSize: '11px', color: '#64748B', letterSpacing: '0.05em' }}>
-            <th style={{ textAlign: 'left', padding: '12px 8px' }}>Description</th>
-            <th style={{ textAlign: 'right', padding: '12px 8px', width: '80px' }}>Qty</th>
-            <th style={{ textAlign: 'right', padding: '12px 8px', width: '120px' }}>Unit Price</th>
-            <th style={{ textAlign: 'right', padding: '12px 8px', width: '120px' }}>Amount</th>
+          <tr style={{ borderBottom: '2px solid #E2E8F0', textTransform: 'uppercase', fontSize: '11px', color: '#64748B', letterSpacing: '0.05em', fontWeight: 600 }}>
+            <th style={{ textAlign: 'left', padding: '12px 8px', fontWeight: 600 }}>Description</th>
+            <th style={{ textAlign: 'right', padding: '12px 8px', width: '80px', fontWeight: 600 }}>Qty</th>
+            <th style={{ textAlign: 'right', padding: '12px 8px', width: '120px', fontWeight: 600 }}>Unit Price</th>
+            <th style={{ textAlign: 'right', padding: '12px 8px', width: '120px', fontWeight: 600 }}>Amount</th>
           </tr>
         </thead>
         <tbody>
           {invoice.items.map((item, idx) => (
             <tr key={item.id || idx} style={{ borderBottom: '1px solid #F1F5F9' }}>
-              <td style={{ padding: '14px 8px', fontSize: '14px', fontWeight: 500, color: '#1E293B' }}>
+              <td style={{ padding: '14px 8px', fontSize: '14px', fontWeight: 400, color: '#1E293B' }}>
                 {item.description || 'Item description'}
               </td>
               <td style={{ padding: '14px 8px', fontSize: '14px', textAlign: 'right', color: '#475569' }}>
@@ -118,7 +118,7 @@ export const ModernTemplate: React.FC<{ invoice: InvoiceData }> = ({ invoice }) 
               <td style={{ padding: '14px 8px', fontSize: '14px', textAlign: 'right', color: '#475569' }}>
                 {formatCurrency(item.price, currency)}
               </td>
-              <td style={{ padding: '14px 8px', fontSize: '14px', textAlign: 'right', fontWeight: 600, color: '#0F172A' }}>
+              <td style={{ padding: '14px 8px', fontSize: '14px', textAlign: 'right', fontWeight: 500, color: '#0F172A' }}>
                 {formatCurrency(item.quantity * item.price, currency)}
               </td>
             </tr>
@@ -152,8 +152,8 @@ export const ModernTemplate: React.FC<{ invoice: InvoiceData }> = ({ invoice }) 
             style={{
               display: 'flex',
               justifyContent: 'space-between',
-              fontSize: '18px',
-              fontWeight: 800,
+              fontSize: '16px',
+              fontWeight: 600,
               color: '#4F46E5',
               borderTop: '2px solid #E2E8F0',
               paddingTop: '12px',
@@ -171,13 +171,13 @@ export const ModernTemplate: React.FC<{ invoice: InvoiceData }> = ({ invoice }) 
         <div style={{ borderTop: '1px solid #E2E8F0', paddingTop: '20px', fontSize: '12px', color: '#64748B', display: 'flex', flexDirection: 'column', gap: '12px' }}>
           {invoice.notes && (
             <div>
-              <strong style={{ color: '#334155' }}>Notes:</strong>
+              <span style={{ color: '#334155', fontWeight: 600 }}>Notes:</span>
               <p style={{ marginTop: '2px', whiteSpace: 'pre-line' }}>{invoice.notes}</p>
             </div>
           )}
           {invoice.terms && (
             <div>
-              <strong style={{ color: '#334155' }}>Terms & Conditions:</strong>
+              <span style={{ color: '#334155', fontWeight: 600 }}>Terms & Conditions:</span>
               <p style={{ marginTop: '2px', whiteSpace: 'pre-line' }}>{invoice.terms}</p>
             </div>
           )}

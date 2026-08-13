@@ -148,10 +148,11 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onNavigate }) => {
               borderRadius: 'var(--radius-lg)',
               overflow: 'hidden',
               border: '1px solid var(--color-border)',
-              backgroundColor: '#F8FAFC',
+              backgroundColor: '#FFFFFF',
+              width: '100%',
             }}
           >
-            <div style={{ display: 'flex', alignItems: 'center', gap: '6px', padding: '6px 12px', backgroundColor: '#E2E8F0', borderBottom: '1px solid #CBD5E1' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '6px', padding: '8px 14px', backgroundColor: '#F1F5F9', borderBottom: '1px solid #CBD5E1' }}>
               <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#EF4444' }} />
               <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#F59E0B' }} />
               <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#10B981' }} />
@@ -159,8 +160,8 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onNavigate }) => {
                 live-sample-preview (Codrix Dev)
               </span>
             </div>
-            <div style={{ padding: '6px', display: 'flex', justifyContent: 'center' }}>
-              <TemplateScaledPreview templateId="modern" invoice={SAMPLE_MARKETING_INVOICE} scaleOverride={0.34} />
+            <div style={{ padding: '0', width: '100%', overflow: 'hidden' }}>
+              <TemplateScaledPreview templateId="modern" invoice={SAMPLE_MARKETING_INVOICE} />
             </div>
           </div>
         </div>
