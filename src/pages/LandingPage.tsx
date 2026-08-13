@@ -81,27 +81,30 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onNavigate }) => {
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column' }}>
-      {/* 1. Hero Section */}
+      {/* 1. Viewport-Fitted Hero Section */}
       <section
         style={{
           backgroundColor: 'var(--color-surface)',
           borderBottom: '1px solid var(--color-border)',
-          minHeight: 'calc(85vh - 44px)',
+          height: 'calc(100vh - 44px)',
+          maxHeight: 'calc(100vh - 44px)',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          padding: '48px 0',
+          padding: '12px 0',
+          boxSizing: 'border-box',
+          overflow: 'hidden',
         }}
       >
-        <div className="container hero-grid" style={{ display: 'grid', gridTemplateColumns: '1.1fr 1fr', gap: '32px', alignItems: 'center', width: '100%' }}>
+        <div className="container hero-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '28px', alignItems: 'center', width: '100%', height: '100%', maxHeight: '100%' }}>
           {/* Left Column */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', maxWidth: '520px' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '14px', maxWidth: '500px' }}>
             <div
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '6px',
-                padding: '4px 12px',
+                padding: '4px 10px',
                 borderRadius: 'var(--radius-full)',
                 backgroundColor: 'var(--color-primary-light)',
                 color: 'var(--color-primary)',
@@ -113,11 +116,11 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onNavigate }) => {
               <Shield size={13} /> 100% Free · Privacy Focused
             </div>
 
-            <h1 style={{ fontSize: '2.5rem', fontWeight: 800, lineHeight: 1.15, letterSpacing: '-0.025em', color: 'var(--color-text-primary)' }}>
+            <h1 style={{ fontSize: '2.15rem', fontWeight: 800, lineHeight: 1.15, letterSpacing: '-0.02em', color: 'var(--color-text-primary)' }}>
               Create Professional Invoices in Seconds
             </h1>
 
-            <p style={{ fontSize: '15px', color: 'var(--color-text-secondary)', lineHeight: 1.5 }}>
+            <p style={{ fontSize: '14px', color: 'var(--color-text-secondary)', lineHeight: 1.45 }}>
               Create beautiful invoices for freelancers, businesses, agencies, consultants, retailers, service providers, and more.
             </p>
 
@@ -150,9 +153,13 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onNavigate }) => {
               border: '1px solid var(--color-border)',
               backgroundColor: '#FFFFFF',
               width: '100%',
+              maxHeight: 'calc(100vh - 84px)',
+              display: 'flex',
+              flexDirection: 'column',
+              margin: 'auto 0',
             }}
           >
-            <div style={{ display: 'flex', alignItems: 'center', gap: '6px', padding: '8px 14px', backgroundColor: '#F1F5F9', borderBottom: '1px solid #CBD5E1' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '6px', padding: '6px 12px', backgroundColor: '#F1F5F9', borderBottom: '1px solid #CBD5E1', flexShrink: 0 }}>
               <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#EF4444' }} />
               <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#F59E0B' }} />
               <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#10B981' }} />
@@ -160,8 +167,8 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onNavigate }) => {
                 live-sample-preview (Codrix Dev)
               </span>
             </div>
-            <div style={{ padding: '0', width: '100%', overflow: 'hidden' }}>
-              <TemplateScaledPreview templateId="modern" invoice={SAMPLE_MARKETING_INVOICE} />
+            <div style={{ padding: '0', width: '100%', overflow: 'hidden', display: 'flex', justifyContent: 'center', alignItems: 'flex-start' }}>
+              <TemplateScaledPreview templateId="modern" invoice={SAMPLE_MARKETING_INVOICE} scaleOverride={0.40} />
             </div>
           </div>
         </div>
