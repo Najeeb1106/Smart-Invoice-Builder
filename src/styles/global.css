@@ -104,10 +104,47 @@ p, .text-body {
   padding-right: 16px;
 }
 
-@media (max-width: 640px) {
+/* Full Mobile Responsiveness System */
+@media (max-width: 768px) {
+  html {
+    font-size: 13px;
+  }
+
+  h1, .text-h1 {
+    font-size: 1.75rem !important;
+  }
+
+  h2, .text-h2 {
+    font-size: 1.4rem !important;
+  }
+
   .container {
-    padding-left: 12px;
-    padding-right: 12px;
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+  }
+
+  /* Table responsiveness on small mobile devices */
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Prevent button or text overflow */
+  button, input, select, textarea {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  h1, .text-h1 {
+    font-size: 1.5rem !important;
+  }
+
+  .container {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
   }
 }
 

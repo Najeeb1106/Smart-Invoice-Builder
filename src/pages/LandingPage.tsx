@@ -83,6 +83,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onNavigate }) => {
     <div style={{ display: 'flex', flexDirection: 'column' }}>
       {/* 1. Viewport-Fitted Hero Section */}
       <section
+        className="hero-section"
         style={{
           backgroundColor: 'var(--color-surface)',
           borderBottom: '1px solid var(--color-border)',
@@ -407,8 +408,18 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onNavigate }) => {
 
       <style>{`
         @media (max-width: 1024px) {
+          .hero-section, .landing-section {
+            height: auto !important;
+            max-height: none !important;
+            min-height: auto !important;
+            padding: 36px 16px !important;
+            overflow: visible !important;
+          }
           .hero-grid {
             grid-template-columns: 1fr !important;
+            gap: 28px !important;
+            height: auto !important;
+            max-height: none !important;
           }
         }
       `}</style>
