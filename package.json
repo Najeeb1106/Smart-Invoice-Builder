@@ -2,6 +2,26 @@
   "name": "smart-invoice-builder",
   "private": true,
   "version": "3.0.0",
+  "description": "⚡ Smart Invoice Builder — Free, privacy-first invoice generator with 12 professional templates, instant PDF exports, and local browser storage.",
+  "homepage": "https://smart-invoice-builder-free.vercel.app/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Najeeb1106/Smart-Invoice-Builder.git"
+  },
+  "keywords": [
+    "invoice-generator",
+    "invoice-builder",
+    "pdf-generator",
+    "react",
+    "typescript",
+    "vite",
+    "privacy-first",
+    "local-storage",
+    "invoice-templates",
+    "freelancer-tools",
+    "billing",
+    "jspdf"
+  ],
   "type": "module",
   "scripts": {
     "dev": "vite",

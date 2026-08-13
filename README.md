@@ -2,12 +2,13 @@
 
 > **A fast, privacy-first, local-first invoice generation application built with React 18, TypeScript, and Vite.**
 
-[![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/Najeeb1106/Smart-Invoice-Builder)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.5.3-3178C6.svg)](https://www.typescriptlang.org/)
-[![React](https://img.shields.io/badge/React-18.3.1-61DAFB.svg)](https://reactjs.org/)
-[![Vite](https://img.shields.io/badge/Vite-5.4.21-646CFF.svg)](https://vitejs.dev/)
-[![Vitest](https://img.shields.io/badge/Vitest-2.1.9-6E9F18.svg)](https://vitest.dev/)
+🌐 **Live Demo**: [https://smart-invoice-builder-free.vercel.app/](https://smart-invoice-builder-free.vercel.app/)
+
+[![Live Demo](https://img.shields.io/badge/Vercel-Live_Demo-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://smart-invoice-builder-free.vercel.app/)
+[![Build Status](https://img.shields.io/badge/Build-Passing-brightgreen.svg?style=for-the-badge)](https://github.com/Najeeb1106/Smart-Invoice-Builder)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.5-3178C6.svg?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![React](https://img.shields.io/badge/React-18.3-61DAFB.svg?style=for-the-badge&logo=react&logoColor=black)](https://reactjs.org/)
 
 ---
 
